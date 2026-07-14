@@ -1,0 +1,20 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  width: 100%;
+}
+
+.scroll-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app-section {
+  width: 100%;
+  /* Offset for sticky header when scrolling into view */
+  scroll-margin-top: 110px;
+}

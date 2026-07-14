@@ -1,0 +1,296 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  max-height: 600px;
+  height: 100%;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  background-color: var(--color-primary-light);
+}
+
+.modal-image-container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+
+.modal-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-favorite-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.modal-favorite-btn:hover {
+  transform: scale(1.1);
+}
+
+.modal-details-container {
+  background-color: var(--color-white);
+  width: 50%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal-scroll-content {
+  padding: 24px;
+  padding-top: 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.modal-category-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-eco-badge {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-secondary-light);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.modal-eco-badge-icon {
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-eco-badge-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--color-secondary);
+}
+
+.modal-product-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.modal-product-price {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.modal-divider {
+  height: 1px;
+  background-color: var(--color-gray-light);
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.modal-section-heading {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.modal-description {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+
+.modal-eco-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--color-beige);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-eco-box-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.modal-eco-box-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--color-secondary);
+  line-height: 18px;
+}
+
+.modal-sizes-section {
+  margin-bottom: 24px;
+}
+
+.modal-sizes-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.size-bubble {
+  border: 1.5px solid var(--color-gray-medium);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  background-color: transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.size-bubble:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.size-bubble.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.modal-cta-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  padding: 14px;
+  border-radius: 30px;
+  color: var(--color-white);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 16px;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.modal-cta-btn:hover {
+  background-color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+.modal-cta-icon {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-footer-note {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--color-text-light);
+  text-align: center;
+  line-height: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+    width: 95%;
+    max-height: 90%;
+  }
+
+  .modal-image-container {
+    width: 100%;
+    height: 250px;
+    flex-shrink: 0;
+  }
+
+  .modal-details-container {
+    width: 100%;
+    height: calc(100% - 250px);
+  }
+
+  .modal-scroll-content {
+    padding: 20px;
+    padding-top: 24px;
+  }
+}

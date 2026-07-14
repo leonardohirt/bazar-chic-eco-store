@@ -1,4 +1,4 @@
-import { useWindowDimensions } from 'react-native';
+import { useState, useEffect } from 'react';
 
 export const breakpoints = {
   mobile: 768,
@@ -6,7 +6,20 @@ export const breakpoints = {
 };
 
 export const useResponsive = () => {
-  const { width, height } = useWindowDimensions();
+  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const [height, setHeight] = useState(typeof window !== 'undefined' ? window.innerHeight : 800);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const isMobile = width < breakpoints.mobile;
   const isTablet = width >= breakpoints.mobile && width < breakpoints.tablet;

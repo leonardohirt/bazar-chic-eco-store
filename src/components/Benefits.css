@@ -1,0 +1,116 @@
+.benefits-section {
+  width: 100%;
+  background-color: var(--color-beige);
+  padding: 80px 24px;
+}
+
+.benefits-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.benefits-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.benefits-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.benefits-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--color-text);
+}
+
+.benefits-divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-secondary);
+  margin: 20px 0;
+  border-radius: 2px;
+}
+
+/* Grid de Diferenciais */
+.benefits-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 2%;
+}
+
+.benefit-card {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid var(--color-gray-light);
+  box-shadow: 0px 6px 10px var(--color-shadow);
+  width: 18.4%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 20px rgba(181, 91, 111, 0.12);
+}
+
+.benefit-icon-bg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.benefit-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-text);
+  margin-bottom: 10px;
+}
+
+.benefit-card-desc {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  line-height: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .benefit-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefit-card {
+    width: 100%;
+  }
+  .benefits-grid {
+    gap: 16px 0;
+  }
+}
