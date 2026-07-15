@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageSquare, ArrowRight, Leaf } from 'lucide-react';
 import { colors } from '../theme/colors';
 import { useResponsive } from '../theme/responsive';
-import bazarPhoto from '../../assets/bazar_photo.jpg';
+import heroWoman from '../../assets/hero_woman.jpg';
 import './Hero.css';
 
 export default function Hero({ onNavigate }) {
@@ -17,7 +17,23 @@ export default function Hero({ onNavigate }) {
     <section className="hero-container">
       <div className="hero-content">
         
-        {/* Lado Esquerdo: Texto e Ações */}
+        {/* Lado Esquerdo: Imagem Destaque */}
+        <div className="hero-image-section">
+          <div className="hero-image-wrapper">
+            <img 
+              src={heroWoman}
+              className="hero-image"
+              alt="Bazar Chic Eco Store Curadoria"
+            />
+            {/* Elemento Decorativo Flutuante */}
+            <div className="hero-floating-badge">
+              <span className="hero-floating-badge-title">Eco Chic 🌿</span>
+              <span className="hero-floating-badge-text">Estilo de Vida Verde</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Lado Direito: Texto e Ações */}
         <div className="hero-text-section">
           {/* Badge Ecológica */}
           <div className="hero-badge">
@@ -78,22 +94,6 @@ export default function Hero({ onNavigate }) {
             <div className="hero-stat-item">
               <h3 className="hero-stat-number">100%</h3>
               <p className="hero-stat-label">Curadoria Rígida</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Lado Direito: Imagem Destaque */}
-        <div className="hero-image-section">
-          <div className="hero-image-wrapper">
-            <img 
-              src={bazarPhoto}
-              className="hero-image"
-              alt="Bazar Chic Eco Store Curadoria"
-            />
-            {/* Elemento Decorativo Flutuante */}
-            <div className="hero-floating-badge">
-              <span className="hero-floating-badge-title">Eco Chic 🌿</span>
-              <span className="hero-floating-badge-text">Estilo de Vida Verde</span>
             </div>
           </div>
         </div>

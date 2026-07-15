@@ -22,7 +22,7 @@
   flex-direction: column;
   justify-content: center;
   width: 50%;
-  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .hero-badge {
@@ -194,7 +194,7 @@
 .hero-floating-badge {
   position: absolute;
   bottom: 20px;
-  left: -20px;
+  right: -20px;
   background-color: var(--color-white);
   padding: 12px 18px;
   border-radius: 16px;
@@ -221,12 +221,12 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .hero-content {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .hero-text-section {
     width: 100%;
-    padding-right: 0;
+    padding-left: 0;
     margin-top: 30px;
   }
 
@@ -261,7 +261,7 @@
   }
 
   .hero-floating-badge {
-    left: 10px;
+    right: 10px;
     bottom: 10px;
   }
 }
